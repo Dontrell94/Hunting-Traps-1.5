@@ -8,29 +8,35 @@ import net.minecraft.world.World;
 public class CageTrap extends Block
 {
 	int b = 1;
+	int textureTop;
+	int textureSide;
 	
-	public CageTrap(int i, int j, Material ground)
+	public CageTrap(int i)
 	{
 		super(i, Material.ground);
+		
+		textureSide = 2;
+		textureTop = 1;
 	}
 	
-	public int getBlockTexturefromSide(int k)
+	@Override
+	public int getBlockTextureFromSide(int side)
 	{
-		switch(k)
-		{
-			case 0: return 4;
-			case 1: return 6;
-			default: return 5;
-		}
+	    if (side == 1)
+	    {
+	        return 5;
+	    }
+	    else if (side == 0)
+	    {
+	        return 6;
+	    }
+	    else
+	    {
+	        return 4;
+	    }
 	}
-	/*
-	 * 0 is bottom
-	 * 1 is top
-	 */
 	
-
-	
-	 public void onNeighborBlockChange(World world, int i, int j, int k, int l)
+	public void onNeighborBlockChange(World world, int i, int j, int k, int l)
      {
              if(world.isBlockGettingPowered(i, j, k))
              {

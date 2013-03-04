@@ -9,10 +9,11 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class HuntingtrapsCommonProxy
 {
-	public void registerRendering() //Client side texture registering
+	public void registerRenderInformation() //Client side texture registering
 	{
 		
 	}
+	
 	public void registerBlocks()
 	{
 		//For registering Blocks
@@ -25,6 +26,7 @@ public class HuntingtrapsCommonProxy
 		GameRegistry.registerBlock(HuntingTraps.FakeSand, "FakeSand");
 		GameRegistry.registerBlock(HuntingTraps.InvisPrsrPlate, "InvisPrsrPlate");
 	}
+	
 	public void addNames()
 	{
 		//For adding Item's ingame names
@@ -37,6 +39,7 @@ public class HuntingtrapsCommonProxy
 		LanguageRegistry.addName(HuntingTraps.FakeSand, "Fake Sand Covering");
 		LanguageRegistry.addName(HuntingTraps.InvisPrsrPlate, "Invisible Pressure Plate");
 	}
+	
 	public void addRecipes()
 	{
 		//For adding your Item's recipes

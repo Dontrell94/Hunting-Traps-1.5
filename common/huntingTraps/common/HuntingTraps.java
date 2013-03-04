@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.EnumMobType;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -17,8 +18,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid = HuntingTraps.ID, version = "0.3.0")
-@NetworkMod(channels = { HuntingTraps.ID }, clientSideRequired=true,serverSideRequired=false) 
+@Mod(modid = HuntingTraps.ID, name = "Hunting Traps", version = "0.3.0")
+@NetworkMod(clientSideRequired=true,serverSideRequired=false) 
 
 public class HuntingTraps
 {
@@ -81,9 +82,10 @@ public class HuntingTraps
 		@Init
 		public void Init(FMLInitializationEvent event)
 		{
+			proxy.registerRenderInformation();
+			
 			//Properties
 			//spikes = new BlockSSpikes(192, 4).setBlockName("spike");
-			//IPP = new BlockInvisiblePP(193, 5, null, null).setBlockName("invisiblepp");
 			GPP = new GPP(GPPID, EnumMobType.everything, Material.grass).setBlockName("GPP");
 			CageTrap = new CageTrap(CageTID, 0, Material.rock).setBlockName("CageTrap");
 			FireCage = new FireCage(FireCageID, 0, Material.rock).setBlockName("FireCage");
@@ -95,21 +97,15 @@ public class HuntingTraps
 			
 			proxy.registerBlocks();
 			
-			//Game Registers
-			/*GameRegistry.registerBlock(spikes, "Spikes");
-			GameRegistry.registerBlock(IPP, "IPP");*/
+			/*GameRegistry.registerBlock(spikes, "Spikes");*/
 			
 			proxy.addNames();
 			
-			//Language Registers
-			/*LanguageRegistry.addName(spikes, "Iron Spikes");
-			LanguageRegistry.addName("IPP", "Invisible Pressure Plate");*/
+			/*LanguageRegistry.addName(spikes, "Iron Spikes");*/
 						
 			proxy.addRecipes();
 			
-			//Recipes
-			/*GameRegistry.addRecipe(new ItemStack(CFT, 1), new Object[] { "IFI", "IRI", "ISI", 'I', Block.stone, 'F', Item.flint, 'S', Item.ingotIron, 'R', Item.redstone});
-			GameRegistry.addRecipe(new ItemStack(spikes, 3), new Object[] { "   ", " I ", "III", 'I', Item.ingotIron });*/
+			/*GameRegistry.addRecipe(new ItemStack(spikes, 3), new Object[] { "   ", " I ", "III", 'I', Item.ingotIron });*/
 			
 			//Creative Tab
 			LanguageRegistry.instance().addStringLocalization("Hunting Traps", "en_US", "Hunting Traps");
