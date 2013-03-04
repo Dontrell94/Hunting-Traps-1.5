@@ -22,6 +22,7 @@ public class HuntingtrapsCommonProxy
 		GameRegistry.registerBlock(HuntingTraps.Pitfall, "Pitfall");
 		GameRegistry.registerBlock(HuntingTraps.IFireTrap, "IFireTrap");
 		GameRegistry.registerBlock(HuntingTraps.FakeGrass, "FakeGrass");
+		GameRegistry.registerBlock(HuntingTraps.FakeSand, "FakeSand");
 	}
 	public void addNames()
 	{
@@ -32,6 +33,7 @@ public class HuntingtrapsCommonProxy
 		LanguageRegistry.addName(HuntingTraps.Pitfall, "Pitfall Trap");
 		LanguageRegistry.addName(HuntingTraps.IFireTrap, "Incinerating Fire Trap");
 		LanguageRegistry.addName(HuntingTraps.FakeGrass, "Fake Grass Covering");
+		LanguageRegistry.addName(HuntingTraps.FakeSand, "Fake Sand Covering");
 	}
 	public void addRecipes()
 	{
@@ -42,5 +44,6 @@ public class HuntingtrapsCommonProxy
 		GameRegistry.addRecipe(new ItemStack(HuntingTraps.Pitfall, 1), new Object[] {"SGS", "IRI", "SGS", 'S', Block.stone, 'G', Item.gunpowder, 'I', Item.ingotIron, 'R', Item.redstone});
 		GameRegistry.addRecipe(new ItemStack(HuntingTraps.IFireTrap, 1), new Object[] { "ISI", "IRI", "IXI", 'S', Item.flintAndSteel, 'I', Block.stone, 'R', Item.redstone, 'X', Item.ingotIron});
 		GameRegistry.addRecipe(new ItemStack(HuntingTraps.FakeGrass, 3), new Object[] { "SSS", "DDD", 'S', Item.seeds, 'D', Block.dirt });
+		GameRegistry.addRecipe(new ItemStack(HuntingTraps.FakeSand, 3), new Object[] { "SSS", "DDD", 'S', Block.sand, 'D', Block.sandStone });
 	}
 }
