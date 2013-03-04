@@ -19,5 +19,4 @@ This mod adds traps for hunting into the game that can be used to capture any mo
 
 8) "Grass Pressure Plates" are like the Invisible ones but look like your texture pack/biome.
 
-
 Original Version can be found at: http://www.minecraftforum.net/topic/1417676-132-hunting-traps-mod-v021-ssp-smpspikes-traps-cages-camouflage-grass-and-more/
