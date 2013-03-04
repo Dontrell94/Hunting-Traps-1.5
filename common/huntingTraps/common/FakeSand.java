@@ -2,6 +2,7 @@ package huntingTraps.common;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 
 public class FakeSand extends Block
@@ -28,6 +29,11 @@ public class FakeSand extends Block
 	public boolean renderAsNormalBlock()
 	{
 		return false;
+	}
+	
+	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int i, int j, int k)
+	{
+		return null;
 	}
 	
 	public boolean blocksMovement()
