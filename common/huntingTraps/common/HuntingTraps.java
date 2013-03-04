@@ -30,8 +30,7 @@ public class HuntingTraps
 	
 	//Blocks
 	/*public static Block spikes;
-	public static Block IPP;
-	public static Block fakesand;*/
+	public static Block IPP;*/
 	public static Block GPP;
 	public static Block CageTrap;
 	public static Block FireCage;
@@ -39,6 +38,7 @@ public class HuntingTraps
 	public static Block IFireTrap;
 	public static Block FakeGrass;
 	public static Block FakeSand;
+	public static Block InvisPrsrPlate;
 	
 	
 	//Config
@@ -49,6 +49,7 @@ public class HuntingTraps
 	public static int IFireTrapID;
 	public static int FakeGrassID;
 	public static int FakeSandID;
+	public static int InvisPrsrPlateID;
 	
 	//Creative Tab
 	public static CreativeTabs customTab = new CreativeTabHuntingTraps("Hunting Traps");
@@ -73,6 +74,7 @@ public class HuntingTraps
 			IFireTrapID = config.getBlock("Incinerating Fire Trap", 2005).getInt();
 			FakeGrassID = config.getBlock("Fake Grass Covering", 2006).getInt();
 			FakeSandID = config.getBlock("Fake Sand Covering", 2007).getInt();
+			InvisPrsrPlateID = config.getBlock("Invisible Pressure Plate", 2008).getInt();
             config.save();
 	} 	 
 	
@@ -82,7 +84,6 @@ public class HuntingTraps
 			//Properties
 			//spikes = new BlockSSpikes(192, 4).setBlockName("spike");
 			//IPP = new BlockInvisiblePP(193, 5, null, null).setBlockName("invisiblepp");
-			//fakesand = new Blockfakesand(195, 7).setBlockName("fakesand");
 			GPP = new GPP(GPPID, EnumMobType.everything, Material.grass).setBlockName("GPP");
 			CageTrap = new CageTrap(CageTID, 0, Material.rock).setBlockName("CageTrap");
 			FireCage = new FireCage(FireCageID, 0, Material.rock).setBlockName("FireCage");
@@ -90,6 +91,8 @@ public class HuntingTraps
 			IFireTrap = new IFireTrap(IFireTrapID, 0, Material.rock).setBlockName("IFireTrap");
 			FakeGrass = new FakeGrass(FakeGrassID, 0, Material.ground).setBlockName("FakeGrass");
 			FakeSand = new FakeSand(FakeSandID, 0, Material.ground).setBlockName("FakeSand");
+			InvisPrsrPlate = new InvisPrsrPlate(InvisPrsrPlateID, EnumMobType.everything, Material.ground).setBlockName("InvisPrsrPlate");
+			
 			proxy.registerBlocks();
 			
 			//Game Registers
@@ -106,8 +109,7 @@ public class HuntingTraps
 			
 			//Recipes
 			/*GameRegistry.addRecipe(new ItemStack(CFT, 1), new Object[] { "IFI", "IRI", "ISI", 'I', Block.stone, 'F', Item.flint, 'S', Item.ingotIron, 'R', Item.redstone});
-			GameRegistry.addRecipe(new ItemStack(spikes, 3), new Object[] { "   ", " I ", "III", 'I', Item.ingotIron });
-			GameRegistry.addRecipe(new ItemStack(IPP, 1), new Object[] { "RGR", "GPG", "RGR", 'R', Item.redstone, 'G', Block.thinGlass, 'P', Block.stone });*/
+			GameRegistry.addRecipe(new ItemStack(spikes, 3), new Object[] { "   ", " I ", "III", 'I', Item.ingotIron });*/
 			
 			//Creative Tab
 			LanguageRegistry.instance().addStringLocalization("Hunting Traps", "en_US", "Hunting Traps");
@@ -118,6 +120,7 @@ public class HuntingTraps
 			IFireTrap.setCreativeTab(HuntingTraps.customTab);
 			FakeGrass.setCreativeTab(HuntingTraps.customTab);
 			FakeSand.setCreativeTab(HuntingTraps.customTab);
+			InvisPrsrPlate.setCreativeTab(HuntingTraps.customTab);
 		}
 
 	@PostInit
