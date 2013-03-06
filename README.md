@@ -3,7 +3,7 @@ Hunting-Traps
 
 This mod adds traps for hunting into the game that can be used to capture any mob! To set most of the traps a pressure plate must be lain on top of it.
 
-1) The "Cage Hunting Trap" will spawn a cage around any mob that DARE walk over the pressure pad!
+1) The "Cage Hunting Trap" will spawn a cage around any mob that dare walk over the pressure pad!
 
 2) The "Fire Hunting Trap" will spark, and set any mob nearby on fire!
 
