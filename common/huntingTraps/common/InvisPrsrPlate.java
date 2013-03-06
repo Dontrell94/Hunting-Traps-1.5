@@ -20,9 +20,9 @@ public class InvisPrsrPlate extends Block
 	/** The mob type that can trigger this pressure plate. */
     private EnumMobType triggerMobType;
 
-    protected InvisPrsrPlate(int par1, EnumMobType par3EnumMobType, Material par4Material)
+    protected InvisPrsrPlate(int par1, EnumMobType par3EnumMobType)
     {
-        super(par1, par4Material);
+        super(par1, Material.ground);
         this.triggerMobType = par3EnumMobType;
         this.setTickRandomly(true);
         this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);

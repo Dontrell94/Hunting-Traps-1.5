@@ -11,7 +11,7 @@ public class Pitfall extends Block
 {
 	int b = 1;
 	
-	public Pitfall(int i, int j, Material rock)
+	public Pitfall(int i, int j)
 	{
 		super(i, Material.rock);
 	}

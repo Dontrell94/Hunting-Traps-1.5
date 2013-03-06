@@ -6,7 +6,6 @@ import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-
 public class HuntingtrapsCommonProxy
 {
 	public void registerRenderInformation() //Client side texture registering
@@ -25,6 +24,7 @@ public class HuntingtrapsCommonProxy
 		GameRegistry.registerBlock(HuntingTraps.FakeGrass, "FakeGrass");
 		GameRegistry.registerBlock(HuntingTraps.FakeSand, "FakeSand");
 		GameRegistry.registerBlock(HuntingTraps.InvisPrsrPlate, "InvisPrsrPlate");
+		GameRegistry.registerBlock(HuntingTraps.Spikes, "Spikes");
 	}
 	
 	public void addNames()
@@ -38,6 +38,7 @@ public class HuntingtrapsCommonProxy
 		LanguageRegistry.addName(HuntingTraps.FakeGrass, "Fake Grass Covering");
 		LanguageRegistry.addName(HuntingTraps.FakeSand, "Fake Sand Covering");
 		LanguageRegistry.addName(HuntingTraps.InvisPrsrPlate, "Invisible Pressure Plate");
+		LanguageRegistry.addName(HuntingTraps.Spikes, "Spikes");
 	}
 	
 	public void addRecipes()
@@ -51,5 +52,6 @@ public class HuntingtrapsCommonProxy
 		GameRegistry.addRecipe(new ItemStack(HuntingTraps.FakeGrass, 3), new Object[] { "SSS", "DDD", 'S', Item.seeds, 'D', Block.dirt });
 		GameRegistry.addRecipe(new ItemStack(HuntingTraps.FakeSand, 3), new Object[] { "SSS", "DDD", 'S', Block.sand, 'D', Block.sandStone });
 		GameRegistry.addRecipe(new ItemStack(HuntingTraps.InvisPrsrPlate, 1), new Object[] { "RGR", "GPG", "RGR", 'R', Item.redstone, 'G', Block.thinGlass, 'P', Block.stone });
+		GameRegistry.addRecipe(new ItemStack(HuntingTraps.Spikes, 3), new Object[] { "   ", " I ", "III", 'I', Item.ingotIron });
 	}
 }

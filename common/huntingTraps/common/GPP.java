@@ -20,9 +20,9 @@ public class GPP extends Block
     /** The mob type that can trigger this pressure plate. */
     private EnumMobType triggerMobType;
 
-    protected GPP(int par1, EnumMobType par3EnumMobType, Material par4Material)
+    protected GPP(int par1, EnumMobType par3EnumMobType)
     {
-        super(par1, par4Material);
+        super(par1, Material.grass);
         this.triggerMobType = par3EnumMobType;
         this.setTickRandomly(true);
         this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);

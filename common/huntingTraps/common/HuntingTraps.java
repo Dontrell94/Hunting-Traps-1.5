@@ -2,9 +2,7 @@ package huntingTraps.common;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.EnumMobType;
-import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -18,7 +16,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid = HuntingTraps.ID, name = "Hunting Traps", version = "0.3.0")
+@Mod(modid = HuntingTraps.ID, name = "Hunting Traps", version = "0.2.9")
 @NetworkMod(clientSideRequired=true,serverSideRequired=false) 
 
 public class HuntingTraps
@@ -30,8 +28,6 @@ public class HuntingTraps
 	public static HuntingTraps instance;
 	
 	//Blocks
-	/*public static Block spikes;
-	public static Block IPP;*/
 	public static Block GPP;
 	public static Block CageTrap;
 	public static Block FireCage;
@@ -40,7 +36,7 @@ public class HuntingTraps
 	public static Block FakeGrass;
 	public static Block FakeSand;
 	public static Block InvisPrsrPlate;
-	
+	public static Block Spikes;
 	
 	//Config
 	public static int GPPID;
@@ -51,6 +47,7 @@ public class HuntingTraps
 	public static int FakeGrassID;
 	public static int FakeSandID;
 	public static int InvisPrsrPlateID;
+	public static int SpikesID;
 	
 	//Creative Tab
 	public static CreativeTabs customTab = new CreativeTabHuntingTraps("Hunting Traps");
@@ -76,6 +73,7 @@ public class HuntingTraps
 			FakeGrassID = config.getBlock("Fake Grass Covering", 2006).getInt();
 			FakeSandID = config.getBlock("Fake Sand Covering", 2007).getInt();
 			InvisPrsrPlateID = config.getBlock("Invisible Pressure Plate", 2008).getInt();
+			SpikesID = config.getBlock("Spikes", 2009).getInt();
             config.save();
 	} 	 
 	
@@ -85,27 +83,19 @@ public class HuntingTraps
 			proxy.registerRenderInformation();
 			
 			//Properties
-			//spikes = new BlockSSpikes(192, 4).setBlockName("spike");
-			GPP = new GPP(GPPID, EnumMobType.everything, Material.grass).setBlockName("GPP");
-			CageTrap = new CageTrap(CageTID, 0, Material.rock).setBlockName("CageTrap");
-			FireCage = new FireCage(FireCageID, 0, Material.rock).setBlockName("FireCage");
-			Pitfall = new Pitfall(PitfallID, 0, Material.rock).setBlockName("Pitfall");
-			IFireTrap = new IFireTrap(IFireTrapID, 0, Material.rock).setBlockName("IFireTrap");
-			FakeGrass = new FakeGrass(FakeGrassID, 0, Material.ground).setBlockName("FakeGrass");
-			FakeSand = new FakeSand(FakeSandID, 0, Material.ground).setBlockName("FakeSand");
-			InvisPrsrPlate = new InvisPrsrPlate(InvisPrsrPlateID, EnumMobType.everything, Material.ground).setBlockName("InvisPrsrPlate");
+			GPP = new GPP(GPPID, EnumMobType.everything).setBlockName("GPP");
+			CageTrap = new CageTrap(CageTID).setBlockName("CageTrap");
+			FireCage = new FireCage(FireCageID, 0).setBlockName("FireCage");
+			Pitfall = new Pitfall(PitfallID, 0).setBlockName("Pitfall");
+			IFireTrap = new IFireTrap(IFireTrapID, 0).setBlockName("IFireTrap");
+			FakeGrass = new FakeGrass(FakeGrassID, 0).setBlockName("FakeGrass");
+			FakeSand = new FakeSand(FakeSandID, 0).setBlockName("FakeSand");
+			InvisPrsrPlate = new InvisPrsrPlate(InvisPrsrPlateID, EnumMobType.everything).setBlockName("InvisPrsrPlate");
+			Spikes = new Spikes(SpikesID).setBlockName("Spikes");
 			
 			proxy.registerBlocks();
-			
-			/*GameRegistry.registerBlock(spikes, "Spikes");*/
-			
-			proxy.addNames();
-			
-			/*LanguageRegistry.addName(spikes, "Iron Spikes");*/
-						
+			proxy.addNames();			
 			proxy.addRecipes();
-			
-			/*GameRegistry.addRecipe(new ItemStack(spikes, 3), new Object[] { "   ", " I ", "III", 'I', Item.ingotIron });*/
 			
 			//Creative Tab
 			LanguageRegistry.instance().addStringLocalization("Hunting Traps", "en_US", "Hunting Traps");
@@ -117,6 +107,7 @@ public class HuntingTraps
 			FakeGrass.setCreativeTab(HuntingTraps.customTab);
 			FakeSand.setCreativeTab(HuntingTraps.customTab);
 			InvisPrsrPlate.setCreativeTab(HuntingTraps.customTab);
+			Spikes.setCreativeTab(HuntingTraps.customTab);
 		}
 
 	@PostInit

@@ -9,7 +9,7 @@ public class FakeGrass extends Block
 {
 	int b = 1;
 	
-	public FakeGrass(int i, int j, Material ground)
+	public FakeGrass(int i, int j)
 	{
 		super(i, Material.ground);
         this.setBlockBounds(0.0F, 0.99F, 0.0F, 1.0F, 1.0F, 1.0F);

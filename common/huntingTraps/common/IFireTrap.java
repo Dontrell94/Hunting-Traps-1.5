@@ -8,7 +8,7 @@ public class IFireTrap extends Block
 {
 	int b = 1;
 	
-	public IFireTrap(int i, int j, Material rock)
+	public IFireTrap(int i, int j)
 	{
 		super(i, Material.rock);
 	}

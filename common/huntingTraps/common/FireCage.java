@@ -9,7 +9,7 @@ public class FireCage extends Block
 {
 	int b = 1;
 	
-	public FireCage(int i, int j, Material rock)
+	public FireCage(int i, int j)
 	{
 		super(i, Material.rock);
 	}
