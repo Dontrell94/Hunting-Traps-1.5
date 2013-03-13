@@ -12,6 +12,7 @@ public class FakeSand extends Block
 	public FakeSand(int i, int j)
 	{
 		super(i, Material.ground);
+        this.blockIndexInTexture = 18;
         this.setBlockBounds(0.0F, 0.99F, 0.0F, 1.0F, 1.0F, 1.0F);
 	}
 	

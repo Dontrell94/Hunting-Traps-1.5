@@ -11,12 +11,17 @@ public class CageTrap extends Block
 	int textureTop;
 	int textureSide;
 	
-	public CageTrap(int i)
+	public CageTrap(int i, int j)
 	{
 		super(i, Material.ground);
 		
 		textureSide = 2;
 		textureTop = 1;
+	}
+	
+	public String getTextureFile()
+	{
+		return "/huntingTraps/textures/hnttrp.png";
 	}
 	
 	@Override

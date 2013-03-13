@@ -1,5 +1,6 @@
 package huntingTraps.common;
 
+import huntingTraps.client.HuntingTrapsClientProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.EnumMobType;
 import net.minecraft.creativetab.CreativeTabs;
@@ -53,7 +54,7 @@ public class HuntingTraps
 	public static CreativeTabs customTab = new CreativeTabHuntingTraps("Hunting Traps");
 	
 	@SidedProxy(clientSide="huntingTraps.client.HuntingTrapsClientProxy", serverSide="huntingTraps.client.HuntingTrapsCommonProxy")
-	public static HuntingtrapsCommonProxy proxy;
+	public static HuntingTrapsClientProxy proxy = new HuntingTrapsClientProxy();
 	
 	@PreInit
 	public void PreInit(FMLPreInitializationEvent event)
@@ -80,18 +81,18 @@ public class HuntingTraps
 		@Init
 		public void Init(FMLInitializationEvent event)
 		{
-			proxy.registerRenderInformation();
+			proxy.registerRenders();
 			
 			//Properties
 			GPP = new GPP(GPPID, EnumMobType.everything).setBlockName("GPP");
-			CageTrap = new CageTrap(CageTID).setBlockName("CageTrap");
-			FireCage = new FireCage(FireCageID, 0).setBlockName("FireCage");
-			Pitfall = new Pitfall(PitfallID, 0).setBlockName("Pitfall");
-			IFireTrap = new IFireTrap(IFireTrapID, 0).setBlockName("IFireTrap");
+			CageTrap = new CageTrap(CageTID, 4).setBlockName("CageTrap");
+			FireCage = new FireCage(FireCageID, 1).setBlockName("FireCage");
+			Pitfall = new Pitfall(PitfallID, 11).setBlockName("Pitfall");
+			IFireTrap = new IFireTrap(IFireTrapID, 7).setBlockName("IFireTrap");
 			FakeGrass = new FakeGrass(FakeGrassID, 0).setBlockName("FakeGrass");
 			FakeSand = new FakeSand(FakeSandID, 0).setBlockName("FakeSand");
-			InvisPrsrPlate = new InvisPrsrPlate(InvisPrsrPlateID, EnumMobType.everything).setBlockName("InvisPrsrPlate");
-			Spikes = new Spikes(SpikesID).setBlockName("Spikes");
+			InvisPrsrPlate = new InvisPrsrPlate(InvisPrsrPlateID, 9, EnumMobType.everything).setBlockName("InvisPrsrPlate");
+			Spikes = new Spikes(SpikesID, 14).setBlockName("Spikes");
 			
 			proxy.registerBlocks();
 			proxy.addNames();			

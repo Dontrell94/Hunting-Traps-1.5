@@ -8,7 +8,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class HuntingtrapsCommonProxy
 {
-	public void registerRenderInformation() //Client side texture registering
+	public void registerRenders() //Client side texture registering
 	{
 		
 	}

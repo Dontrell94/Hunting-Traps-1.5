@@ -16,13 +16,25 @@ public class Pitfall extends Block
 		super(i, Material.rock);
 	}
 	
-	public int getBlockTexturefromSide(int k)
+	public String getTextureFile()
 	{
-		switch(k)
-		{
-			case 0: return 4;
-			case 1: return 6;
-			default: return 5;
+		return "/huntingTraps/textures/hnttrp.png";
+	}
+	
+	@Override
+	public int getBlockTextureFromSide(int side)
+	{
+	    if (side == 1)
+	    {
+			return 10;
+	    }
+	    else if (side == 0)
+	    {
+			return 12;
+	    }
+	    else
+	    {
+			return 11;
 		}
 	}
 	/*
