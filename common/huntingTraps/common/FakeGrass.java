@@ -15,7 +15,7 @@ public class FakeGrass extends Block
 	
 	public FakeGrass(int i, int j)
 	{
-		super(i, j, Material.ground);
+		super(i, Material.ground);
         this.blockIndexInTexture = 0;
         this.setBlockBounds(0.0F, 0.99F, 0.0F, 1.0F, 1.0F, 1.0F);
 	}

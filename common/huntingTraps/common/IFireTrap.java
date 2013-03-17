@@ -18,7 +18,7 @@ public class IFireTrap extends Block
 		return "/huntingTraps/textures/hnttrp.png";
 	}
 	
-	@Override
+	/*@Override
 	public int getBlockTextureFromSide(int side)
 	{
 	    if (side == 1)
@@ -33,7 +33,7 @@ public class IFireTrap extends Block
 	    {
 			return 7;
 		}
-	}
+	}*/
 	/*
 	 * 0 is bottom
 	 * 1 is top

@@ -19,7 +19,7 @@ public class FireCage extends Block
 		return "/huntingTraps/textures/hnttrp.png";
 	}
 	
-	@Override
+	/*@Override
 	public int getBlockTextureFromSide(int side)
 	{
 	    if (side == 1)
@@ -34,7 +34,7 @@ public class FireCage extends Block
 	    {
 			return 1;
 		}
-	}
+	}*/
 	/*
 	 * 0 is bottom
 	 * 1 is top
@@ -44,7 +44,7 @@ public class FireCage extends Block
 	
 	 public void onNeighborBlockChange(World world, int i, int j, int k, int l)
      {
-             if(world.isBlockGettingPowered(i, j, k))
+             if(world.isBlockIndirectlyGettingPowered(i, j, k))
              {
                     int block = Block.fire.blockID;
 	                        

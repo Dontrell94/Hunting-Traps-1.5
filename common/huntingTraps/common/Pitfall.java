@@ -21,7 +21,7 @@ public class Pitfall extends Block
 		return "/huntingTraps/textures/hnttrp.png";
 	}
 	
-	@Override
+	/*@Override
 	public int getBlockTextureFromSide(int side)
 	{
 	    if (side == 1)
@@ -36,7 +36,7 @@ public class Pitfall extends Block
 	    {
 			return 11;
 		}
-	}
+	}*/
 	/*
 	 * 0 is bottom
 	 * 1 is top
@@ -49,7 +49,7 @@ public class Pitfall extends Block
 	
 	 public void onNeighborBlockChange(World world, int i, int j, int k, int l)
      {
-             if(world.isBlockGettingPowered(i, j, k))
+             /*if(world.isBlockGettingPowered(i, j, k))
              {
                     world.setBlockWithNotify(i, j, k, 0);
          			world.setBlockWithNotify(i, j, k - 1, 0);
@@ -86,7 +86,7 @@ public class Pitfall extends Block
          			world.setBlockWithNotify(i - 1, j - 3, k + 1, 0);
          			world.setBlockWithNotify(i - 1, j - 3, k - 1, 0);
          			world.setBlockWithNotify(i + 1, j - 3, k + 1, 0);
-         			world.setBlockWithNotify(i + 1, j - 3, k - 1, 0);
+         			world.setBlockWithNotify(i + 1, j - 3, k - 1, 0);*/
          			if (this.b == 1)
         			{
          				ModLoader.getMinecraftInstance().thePlayer.addChatMessage("! - A mob has triggered a Pit Fall Trap nearby.");

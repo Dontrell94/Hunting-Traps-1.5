@@ -24,7 +24,7 @@ public class CageTrap extends Block
 		return "/huntingTraps/textures/hnttrp.png";
 	}
 	
-	@Override
+	/*@Override
 	public int getBlockTextureFromSide(int side)
 	{
 	    if (side == 1)
@@ -39,11 +39,11 @@ public class CageTrap extends Block
 	    {
 	        return 4;
 	    }
-	}
+	}*/
 	
 	public void onNeighborBlockChange(World world, int i, int j, int k, int l)
      {
-             if(world.isBlockGettingPowered(i, j, k))
+             if(world.isBlockIndirectlyGettingPowered(i, j, k))
              {
                      int block = Block.fenceIron.blockID;
 	                        

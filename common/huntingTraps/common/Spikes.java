@@ -11,7 +11,7 @@ public class Spikes extends Block
 {
 	public Spikes(int par1, int j)
 	{
-		super(par1, j, Material.iron);
+		super(par1, Material.iron);
 	}
 	
 	public String getTextureFile()
@@ -19,11 +19,11 @@ public class Spikes extends Block
 		return "/huntingTraps/textures/hnttrp.png";
 	}
 	
-	@Override
+	/*@Override
 	public int getBlockTextureFromSide(int j)
 	{
 		return 14;
-	}
+	}*/
 	
 	public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
 	{

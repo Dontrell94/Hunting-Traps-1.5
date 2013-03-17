@@ -84,15 +84,15 @@ public class HuntingTraps
 			proxy.registerRenders();
 			
 			//Properties
-			GPP = new GPP(GPPID, EnumMobType.everything).setBlockName("GPP");
-			CageTrap = new CageTrap(CageTID, 4).setBlockName("CageTrap");
-			FireCage = new FireCage(FireCageID, 1).setBlockName("FireCage");
-			Pitfall = new Pitfall(PitfallID, 11).setBlockName("Pitfall");
-			IFireTrap = new IFireTrap(IFireTrapID, 7).setBlockName("IFireTrap");
-			FakeGrass = new FakeGrass(FakeGrassID, 0).setBlockName("FakeGrass");
-			FakeSand = new FakeSand(FakeSandID, 0).setBlockName("FakeSand");
-			InvisPrsrPlate = new InvisPrsrPlate(InvisPrsrPlateID, 9, EnumMobType.everything).setBlockName("InvisPrsrPlate");
-			Spikes = new Spikes(SpikesID, 14).setBlockName("Spikes");
+			GPP = new GPP(GPPID, EnumMobType.everything).setUnlocalizedName("GPP");
+			CageTrap = new CageTrap(CageTID, 4).setUnlocalizedName("CageTrap");
+			FireCage = new FireCage(FireCageID, 1).setUnlocalizedName("FireCage");
+			Pitfall = new Pitfall(PitfallID, 11).setUnlocalizedName("Pitfall");
+			IFireTrap = new IFireTrap(IFireTrapID, 7).setUnlocalizedName("IFireTrap");
+			FakeGrass = new FakeGrass(FakeGrassID, 0).setUnlocalizedName("FakeGrass");
+			FakeSand = new FakeSand(FakeSandID, 0).setUnlocalizedName("FakeSand");
+			InvisPrsrPlate = new InvisPrsrPlate(InvisPrsrPlateID, 9, EnumMobType.everything).setUnlocalizedName("InvisPrsrPlate");
+			Spikes = new Spikes(SpikesID, 14).setUnlocalizedName("Spikes");
 			
 			proxy.registerBlocks();
 			proxy.addNames();			

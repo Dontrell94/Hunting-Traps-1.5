@@ -33,11 +33,11 @@ public class InvisPrsrPlate extends Block
 		return "/huntingTraps/textures/hnttrp.png";
 	}
     
-    @Override
+    /*@Override
     public int getBlockTextureFromSide(int j)
     {
     	return 9;
-    }
+    }*/
 
     /**
      * How many world ticks before ticking
